@@ -13,13 +13,13 @@
 
 <script>
     const container = document.querySelector("#container");
-    for (i=0; i<16; i++) {
+    for (i=0; i<256; i++) {
         const square = document.createElement("div");
         square.classList.add('square');
-        square.style.height = "80px";
+        square.style.height = "54px";
         square.style.border = "3px solid black";
         square.style.background = "red";
-        square.innerHTML = `square ${i+1}`;
+        square.innerHTML = `${i+1}`;
         container.appendChild(square);
     }
 </script>
