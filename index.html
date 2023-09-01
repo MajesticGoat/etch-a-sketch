@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-A-Sketch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id = "container"></div>
+</body>
+
+<script>
+    const container = document.querySelector("#container");
+    for (i=0; i<16; i++) {
+        const square = document.createElement("div");
+        square.classList.add('square');
+        square.style.height = "80px";
+        square.style.border = "3px solid black";
+        square.style.background = "red";
+        square.innerHTML = `square ${i+1}`;
+        container.appendChild(square);
+    }
+</script>
+</html>

@@ -1,0 +1,8 @@
+#container {
+    width: 400px;
+    display:flex;
+    flex-wrap:wrap;
+}
+#container>* {
+    flex: 1 1 80px;
+}
