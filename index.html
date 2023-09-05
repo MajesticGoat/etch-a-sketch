@@ -22,5 +22,16 @@
         square.innerHTML = `${i+1}`;
         container.appendChild(square);
     }
+    const highlight = document.getElementById("container");
+    highlight.addEventListener(
+        "mouseover", 
+        (event) => {
+            event.target.style.background = "green";
+    })
+    highlight.addEventListener(
+        "mouseout",
+        (event) => {
+            event.target.style.background = "#F0FFF0";
+        })
 </script>
 </html>
