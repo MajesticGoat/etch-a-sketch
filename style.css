@@ -1,8 +1,5 @@
 #container {
-    width: 1000px;
+    width: 1080px;
     display:flex;
     flex-wrap:wrap;
-}
-#container>* {
-    flex: 1 1 58px;
 }

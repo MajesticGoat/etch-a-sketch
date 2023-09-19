@@ -8,20 +8,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <button type="button">Change Dimensions</button>
     <div id = "container"></div>
 </body>
 
 <script>
-    const container = document.querySelector("#container");
-    for (i=0; i<256; i++) {
-        const square = document.createElement("div");
-        square.classList.add('square');
-        square.style.height = "58px";
-        square.style.border = "1px solid #2E8B57";
-        square.style.background = "#F0FFF0";
-        square.innerHTML = `${i+1}`;
-        container.appendChild(square);
-    }
     const highlight = document.getElementById("container");
     highlight.addEventListener(
         "mouseover", 
@@ -33,5 +24,21 @@
         (event) => {
             event.target.style.background = "#F0FFF0";
         })
+    const dimensions = document.querySelector("button");
+    dimensions.addEventListener("click", function(){
+        let numberOfSquares = prompt("Please enter squares per side:")
+        const container = document.querySelector("#container");
+        for (i=0; i<numberOfSquares**2; i++) {
+            const square = document.createElement("div");
+            square.classList.add('square');
+            let squaresWidth = (1080/numberOfSquares)-2;
+            square.style.width = `${squaresWidth}px`;
+            square.style.height = `${squaresWidth}px`;
+            square.style.border = "1px solid #2E8B57";
+            square.style.background = "#F0FFF0";
+            square.innerHTML = `${i+1}`;
+            container.appendChild(square);
+    }
+    });
 </script>
 </html>
