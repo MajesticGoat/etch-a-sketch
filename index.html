@@ -26,9 +26,11 @@
         })
     const dimensions = document.querySelector("button");
     dimensions.addEventListener("click", function(){
-        let numberOfSquares = prompt("Please enter squares per side:")
+        let numberOfSquares = prompt("Please enter squares per side (Maximum of 100)")
         const container = document.querySelector("#container");
+        container.replaceChildren();
         for (i=0; i<numberOfSquares**2; i++) {
+            if (numberOfSquares >100) { break };
             const square = document.createElement("div");
             square.classList.add('square');
             let squaresWidth = (1080/numberOfSquares)-2;
